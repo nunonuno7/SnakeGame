@@ -115,8 +115,8 @@ class Snake():
         for position in self.snake_positions[1:]:
             if self.head.distance(position) < 10:
                 print(f"Game Over score: {self.score}")
-                color("White")
-                write(f'Game Over', move=False, align='left', font=('Arial', 15, 'normal'))
+                color("red")
+                write("YOU DIED", align="center", font=("Arial", 30, "bold"))
                 return
         self.screen.ontimer(self.continuous_move, 1)
         
